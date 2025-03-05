@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Name</title>
+    <title>Page Title | Group Name</title>
     <link rel="stylesheet" href="styles.css">
 
     <!-- Favicon -->
@@ -36,17 +36,17 @@
 
     <div class="header-h1">
         <br> <br> <br>
-        <h1>Product Name</h1> 
+        <h1>Page Title</h1> 
         <br>
     </div>
 
     <!-- Main Content -->
     <main>
-        <h2 class="leftheader-h2">
+        <h2 class="header-h2">
             SECTION TITLE
         </h2>
 
-        <p class="leftdesc-text">
+        <p class="desc-text">
             First Line<br>
             Second Line<br>
             <br>
@@ -61,5 +61,30 @@
             &copy; 2025 Department of Electronic Engineering,<br>Royal Holloway, University of London.
         </p>
     </footer>
+
+    <!-- For Firebase Hosting Only -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+          // TODO: Add SDKs for Firebase products that you want to use
+          // https://firebase.google.com/docs/web/setup#available-libraries
+
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyC_M0TCwtCECo4rwnAVG4Yfg7xh90nX3ck",
+            authDomain: "rhulmakers-members-portal.firebaseapp.com",
+            projectId: "rhulmakers-members-portal",
+            storageBucket: "rhulmakers-members-portal.firebasestorage.app",
+            messagingSenderId: "423791052279",
+            appId: "1:423791052279:web:9162e22d5b1c665240daf2",
+            measurementId: "G-2NYNSD9SHQ"
+        };
+
+          // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
