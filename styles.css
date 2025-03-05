@@ -271,6 +271,11 @@ nav ul li a:hover {
     padding: 0px 0;
 }
 
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
 /* Solid border */
 hr.solid {
     border-top: 3px solid #bbbbbb;
