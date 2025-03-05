@@ -239,6 +239,8 @@ nav ul li a:hover {
     background-color: transparent;
     text-align: left;
     padding: 8px 0;
+    word-wrap: break-word;
+    width: 60%;
 }
 
 .rightdesc-text {
@@ -251,6 +253,7 @@ nav ul li a:hover {
     text-indent: 0%;
     padding: 8px 0;
 }
+
 
 .comment-text {
     font-size: 10px;
@@ -272,9 +275,10 @@ nav ul li a:hover {
 }
 
 a:hover {
+    color: #CCED2B;
     font-weight: bold;
-    text-decoration: underline;
-  }
+    text-decoration: none;
+}
 
 /* Solid border */
 hr.solid {
@@ -308,7 +312,7 @@ hr.solid {
 
 /* Main Content */
 main {
-    background-color: #ffffff;
+    background-color: #f7f7f7;
     color: #000000;
     padding: 20px;
 }
