@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Name</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_index.css">
 
     <!-- Favicon -->
     <!-- Basic Favicon (ICO format) -->
@@ -21,39 +21,92 @@
 </head>
 
 <body>
+    <script>
+        var day = new Date();
+        var hour = day.getHours(); //No need for parseInt, getHours returns a number.
+        var img;
+
+        if (hour >= 19 && hour < 23) { //Changed to >= to include hour 6.
+            img = "SHILLING-day-bg.jpg";
+        } else {
+            img = "SHILLING-night-bg.jpg";
+        }
+
+        document.getElementById("background").src = img; //moved to the end of the script.
+    </script>
+
+    <script>
+        // Get the element
+        var r = document.querySelector('body');
+        
+        // Create a function for getting a variable value
+        function getVar() {
+        // Get the styles (properties and values) for the root
+        var rs = getComputedStyle(r);
+        // Alert the value of the variable
+        alert("The value of background-image is: " + rs.getPropertyValue('background-image'));
+        }
+        
+        // Create a function for setting a variable value
+        function setVar() {
+        // Set the value of variable --blue to another value (in this case "lightblue")
+        r.style.setProperty('background-image', 'url(background)');
+        }
+    </script>
+
+    <!-- SVG filter for gooey effect (optional) -->
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix"
+            values="1 0 0 0 0  
+                    0 1 0 0 0  
+                    0 0 1 0 0  
+                    0 0 0 20 -10" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+        </filter>
+        </defs>
+    </svg>
+
+    <!-- Glass surface layer -->
+    <div id="glass-surface"></div>
+
+    <!-- Loading container -->
+    <div class="loading-container">
+        <div class="logo-container">
+            <div class="logo-background"></div>
+            <div class="logo-inner"></div>
+            <div class="logo-of">
+                <!-- Logo -->
+                <img src="/Assets/RHUL_logo_circled.png" alt="Logo of Royal Holloway, University of London" />
+            </div>
+        </div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+        <!-- <div class="loading-text">Initialising</div> -->
+    </div>
+
     <!-- Navigation Bar -->
     <nav>
         <ul>
             <li class="align-center"><a href="index.html">Home</a></li>
+            <li class="align-center"><a href="intro.html">Introduction</a></li>
             <li class="align-center"><a href="manual.html">User Manual</a></li>
             <li class="align-center"><a href="techspec.html">Technical Specifications</a></li>
             <li class="align-center"><a href="about.html">Developers Information</a></li>
-                    </div>
-            </div>
         </ul>
     </nav>
 
-
-    <div class="header-h1">
-        <br> <br> <br>
-        <h1>Product Name</h1> 
+    <!-- Content -->
+    <div class="title">
+        <br> <br>
+        
+        <br>
+        <h1>Welcome</h1> 
         <br>
     </div>
-
-    <!-- Main Content -->
-    <main>
-        <h2 class="leftheader-h2">
-            SECTION TITLE
-        </h2>
-
-        <p class="leftdesc-text">
-            First Line<br>
-            Second Line<br>
-            <br>
-        </p>
-
-        <hr class="solid">
-    </main>
 
     <!-- Footer -->
     <footer>
@@ -61,5 +114,66 @@
             &copy; 2025 Department of Electronic Engineering,<br>Royal Holloway, University of London.
         </p>
     </footer>
+
+    <!-- Container for splat animations -->
+    <div id="splat-container"></div>
+
+    <script>
+        // Create a splat element with random properties simulating “jizz” that sticks then slides down.
+        function createSplat() {
+        const splat = document.createElement('div');
+        splat.className = 'splat';
+        const size = Math.random() * 40 + 20; // size between 20px and 60px
+        splat.style.width = size + 'px';
+        splat.style.height = size + 'px';
+        // Set a random starting position within the viewport.
+        const startX = Math.random() * (window.innerWidth - size);
+        const startY = Math.random() * (window.innerHeight - size);
+        splat.style.left = startX + 'px';
+        splat.style.top = startY + 'px';
+        // Set a random slide distance (simulate how far the jizz runs down the glass)
+        const slideDistance = Math.floor(Math.random() * 150 + 50) + 'px'; // 50px to 200px downward
+        splat.style.setProperty('--slideDistance', slideDistance);
+        // Randomize a slight delay so not all splats start at once.
+        splat.style.animationDelay = Math.random() * 1 + 's';
+        return splat;
+        }
+
+        // Trigger the splat animations.
+        function triggerSplats() {
+        const splatContainer = document.getElementById('splat-container');
+        const splatCount = 30; // Number of splats to generate.
+        for (let i = 0; i < splatCount; i++) {
+            const splat = createSplat();
+            splatContainer.appendChild(splat);
+        }
+        // Optionally, you can keep the splats on screen or remove them after a long duration.
+        // remove after 10 seconds:
+        setTimeout(() => {
+            splatContainer.innerHTML = '';
+        }, 10000);
+        }
+
+        // Animate the loading progress bar.
+        let progress = 0;
+        const progressBar = document.querySelector('.loading-progress');
+        const progressInterval = setInterval(() => {
+        progress += 1;
+        progressBar.style.width = progress + '%';
+        if (progress >= 100) {
+            clearInterval(progressInterval);
+        }
+        }, 30);
+
+        // Simulate loading: After 15 seconds, hide the loading screen and trigger the splat effect.
+        setTimeout(() => {
+        document.querySelector('.loading-container').style.display = 'none';
+        document.querySelector('#glass-surface').style.display = 'none';
+        document.querySelector('.title').style.display = 'block';
+        // triggerSplats();
+        // AnimationEffect(FadeOut, 1000);
+        }, 15000);
+    </script>
 </body>
+
 </html>

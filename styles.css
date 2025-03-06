@@ -1,5 +1,6 @@
 /* Style Settings */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Music&display=swap');
+@import url(https://use.typekit.net/mgs6fee.css);
 
 * {
     margin: 0;
@@ -166,6 +167,12 @@ nav ul li a:hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+nav ul li a:active {
+    color: #EC6921;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header-h1 {
     font-family: "Lexend", sans-serif;
     font-weight: bold;
@@ -175,10 +182,10 @@ nav ul li a:hover {
     color: #ffffff;
     background-color: #202A30;
     text-align: center;
-    height: 250px;
+    height: 100%;
     gap: 0px;
 
-    background-image: url("SHILLING-bg.jpg");
+    background-image: url("/Assets/SHILLING-night-bg.jpg");
     background-size: auto auto; /* Makes the iframe cover the entire background */
     background-position: center; /* Centers the iframe */
     background-repeat: no-repeat; /* Prevents the iframe from repeating */
@@ -186,7 +193,7 @@ nav ul li a:hover {
 }
 
 .leftheader-h2 {
-    font-family: "NASALIZATION", sans-serif;
+    font-family: nasalization, sans-serif;
     font-weight: bold;
     font-size: 24px;
 
