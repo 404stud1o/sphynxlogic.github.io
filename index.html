@@ -6,9 +6,41 @@
     <title>Group Name</title>
     <link rel="stylesheet" href="styles_index.css">
 
+    <!-- Time Depending BG -->
+    <script>
+        function setBackgroundImageByTime() {
+            const now = new Date();
+            const hour = now.getHours();
+            let imageUrl;
+
+            if (hour >= 6 && hour < 18) {
+                imageUrl = 'url("/Assets/SHILLING-day-bg.jpg")'; 
+            } 
+            else if (hour >= 18 && hour < 23) {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            } 
+            else if (hour >= 0 && hour < 6) {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            }
+            else {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            }
+
+            // Apply the background image to the desired element
+            const element = document.body; // Or any other element
+            element.style.backgroundImage = imageUrl;
+        }
+
+        // Call the function when the page loads
+        window.onload = setBackgroundImageByTime;
+
+        // Optionally, update the background image every sec
+        setInterval(setBackgroundImageByTime, 6000);
+    </script>
+
     <!-- Favicon -->
     <!-- Basic Favicon (ICO format) -->
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/404stud1o/EE1000T2G9_JustAMinute/refs/heads/assets/favicon_v1.ico">
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon_v1.ico">
 
     <!-- Apple Touch Icon (iOS devices) -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -21,39 +53,6 @@
 </head>
 
 <body>
-    <script>
-        var day = new Date();
-        var hour = day.getHours(); //No need for parseInt, getHours returns a number.
-        var img;
-
-        if (hour >= 19 && hour < 23) { //Changed to >= to include hour 6.
-            img = "SHILLING-day-bg.jpg";
-        } else {
-            img = "SHILLING-night-bg.jpg";
-        }
-
-        document.getElementById("background").src = img; //moved to the end of the script.
-    </script>
-
-    <script>
-        // Get the element
-        var r = document.querySelector('body');
-        
-        // Create a function for getting a variable value
-        function getVar() {
-        // Get the styles (properties and values) for the root
-        var rs = getComputedStyle(r);
-        // Alert the value of the variable
-        alert("The value of background-image is: " + rs.getPropertyValue('background-image'));
-        }
-        
-        // Create a function for setting a variable value
-        function setVar() {
-        // Set the value of variable --blue to another value (in this case "lightblue")
-        r.style.setProperty('background-image', 'url(background)');
-        }
-    </script>
-
     <!-- SVG filter for gooey effect (optional) -->
     <svg width="0" height="0" style="position:absolute;">
         <defs>
@@ -104,14 +103,15 @@
         <br> <br>
         
         <br>
-        <h1>Welcome</h1> 
+        <h1>WELCOME</h1> 
         <br>
     </div>
 
     <!-- Footer -->
     <footer>
+        <img src="/Assets/RHUL-White.png" alt="Logo of Royal Holloway, University of London" class="footer-logo">
         <p>
-            &copy; 2025 Department of Electronic Engineering,<br>Royal Holloway, University of London.
+            &copy; 2025 Department of Electronic Engineering  ·  Royal Holloway, University of London.
         </p>
     </footer>
 

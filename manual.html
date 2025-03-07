@@ -6,9 +6,44 @@
     <title>User Manual | Group Name</title>
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Time Depending BG -->
+    <script>
+        function setBackgroundImageByTime() {
+            const now = new Date();
+            const hour = now.getHours();
+            let imageUrl;
+
+            if (hour >= 6 && hour < 18) {
+                imageUrl = 'url("/Assets/SHILLING-day-bg.jpg")'; 
+            } 
+            else if (hour >= 18 && hour < 23) {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            } 
+            else if (hour >= 0 && hour < 6) {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            }
+            else {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            }
+
+            // Apply the background image to the header-h1 element
+            const headerH1 = document.querySelector(".header-h1");
+
+            if (headerH1) { // Check if the element exists
+                headerH1.style.backgroundImage = imageUrl;
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = setBackgroundImageByTime;
+
+        // Optionally, update the background image every sec
+        setInterval(setBackgroundImageByTime, 6000);
+    </script>
+
     <!-- Favicon -->
     <!-- Basic Favicon (ICO format) -->
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/404stud1o/EE1000T2G9_JustAMinute/refs/heads/assets/favicon_v1.ico">
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon_v1.ico">
 
     <!-- Apple Touch Icon (iOS devices) -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -56,8 +91,9 @@
 
     <!-- Footer -->
     <footer>
+        <img src="/Assets/RHUL-White.png" alt="Logo of Royal Holloway, University of London" class="footer-logo">
         <p>
-            &copy; 2025 Department of Electronic Engineering,<br>Royal Holloway, University of London.
+            &copy; 2025 Department of Electronic Engineering  ·  Royal Holloway, University of London.
         </p>
     </footer>
 </body>

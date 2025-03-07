@@ -6,9 +6,44 @@
     <title>Page Title | Group Name</title>
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Time Depending BG -->
+    <script>
+        function setBackgroundImageByTime() {
+            const now = new Date();
+            const hour = now.getHours();
+            let imageUrl;
+
+            if (hour >= 6 && hour < 18) {
+                imageUrl = 'url("/Assets/SHILLING-day-bg.jpg")'; 
+            } 
+            else if (hour >= 18 && hour < 23) {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            } 
+            else if (hour >= 0 && hour < 6) {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            }
+            else {
+                imageUrl = 'url("/Assets/SHILLING-night-bg.jpg")'; 
+            }
+
+            // Apply the background image to the header-h1 element
+            const headerH1 = document.querySelector(".header-h1");
+
+            if (headerH1) { // Check if the element exists
+                headerH1.style.backgroundImage = imageUrl;
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = setBackgroundImageByTime;
+
+        // Optionally, update the background image every sec
+        setInterval(setBackgroundImageByTime, 6000);
+    </script>
+
     <!-- Favicon -->
     <!-- Basic Favicon (ICO format) -->
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/404stud1o/EE1000T2G9_JustAMinute/refs/heads/assets/favicon_v1.ico">
+    <link rel="icon" type="image/x-icon" href="/Assets/favicon_v1.ico">
 
     <!-- Apple Touch Icon (iOS devices) -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -25,11 +60,10 @@
     <nav>
         <ul>
             <li class="align-center"><a href="index.html">Home</a></li>
+            <li class="align-center"><a href="intro.html">Introduction</a></li>
             <li class="align-center"><a href="manual.html">User Manual</a></li>
             <li class="align-center"><a href="techspec.html">Technical Specifications</a></li>
             <li class="align-center"><a href="about.html">Developers Information</a></li>
-                    </div>
-            </div>
         </ul>
     </nav>
 
@@ -57,34 +91,10 @@
 
     <!-- Footer -->
     <footer>
+        <img src="/Assets/RHUL-White.png" alt="Logo of Royal Holloway, University of London" class="footer-logo">
         <p>
-            &copy; 2025 Department of Electronic Engineering,<br>Royal Holloway, University of London.
+            &copy; 2025 Department of Electronic Engineering  ·  Royal Holloway, University of London.
         </p>
     </footer>
-
-    <!-- For Firebase Hosting Only -->
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
-          // TODO: Add SDKs for Firebase products that you want to use
-          // https://firebase.google.com/docs/web/setup#available-libraries
-
-          // Your web app's Firebase configuration
-          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyC_M0TCwtCECo4rwnAVG4Yfg7xh90nX3ck",
-            authDomain: "rhulmakers-members-portal.firebaseapp.com",
-            projectId: "rhulmakers-members-portal",
-            storageBucket: "rhulmakers-members-portal.firebasestorage.app",
-            messagingSenderId: "423791052279",
-            appId: "1:423791052279:web:9162e22d5b1c665240daf2",
-            measurementId: "G-2NYNSD9SHQ"
-        };
-
-          // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
 </body>
 </html>

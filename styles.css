@@ -1,6 +1,25 @@
-/* Style Settings */
+/* Lexend */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Music&display=swap');
+/* Barlow */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* NASALIZATION */
 @import url(https://use.typekit.net/mgs6fee.css);
+/* Bebas Neue */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Bahnschrift */
+@font-face {
+    font-family: 'Bahnschrift';
+    src:url('Assets/Bahnschrift.ttf') format('truetype');
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #202A30;
+    --orange: #EC6921;
+    --lime: #CCED2B;
+}
 
 * {
     margin: 0;
@@ -70,8 +89,8 @@ body {
 
 /* Header */
 header {
-    background-color: #202A30;
-    color: #ffffff;
+    background-color: var(--grey);
+    color: var(--white);
     padding: 0px 0;
     text-align: center;
     width: 100%;
@@ -81,7 +100,7 @@ header {
 
 /* Navigation Bar */
 nav {
-    background-color: #202A30;
+    background-color: var(--grey);
     width: 100%;
     position: fixed;
     padding: 12px 0px;
@@ -90,7 +109,7 @@ nav {
     .dropbtn {
         font-family: Roboto, sans-serif;
         background-color: transparent;
-        color: #ffffff;
+        color: var(--white);
         padding: 0px;
         font-size: 14px;
         font-weight: bold;
@@ -108,8 +127,8 @@ nav {
         font-family: Roboto, sans-serif;
         font-size: 14px;
         font-weight: bold;
-        color: #ffffff;
-        background-color: #202A30;
+        color: var(--white);
+        background-color: var(--grey);
         text-decoration: none;
         background-color: transparent;
         display: none;
@@ -120,8 +139,8 @@ nav {
 
     /* Links inside the dropdown */
     .dropdown-content a {
-        color: #ffffff;
-        background-color: #202A30;
+        color: var(--white);
+        background-color: var(--grey);
         padding: 10px 16px;
         text-decoration: none;
         display: block;
@@ -129,8 +148,8 @@ nav {
 
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {
-        background-color: #202A30;
-        color: #EC6921;
+        background-color: var(--grey);
+        color: var(--orange);
     }
 
     /* Show the dropdown menu on hover */
@@ -138,8 +157,8 @@ nav {
 
     /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
-        background-color: #202A30; 
-        color: #EC6921;
+        background-color: var(--grey); 
+        color: var(--orange);
     }
 }
 
@@ -154,7 +173,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--white);
     transition: text-shadow 0.3s ease;
     font-weight: bold;
     font-size: 14px;
@@ -162,13 +181,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #EC6921;
+    color: var(--orange);
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav ul li a:active {
-    color: #EC6921;
+    color: var(--orange);
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -179,14 +198,14 @@ nav ul li a:active {
     font-size: 20px;
 
     margin: 0;
-    color: #ffffff;
-    background-color: #202A30;
+    color: var(--white);
+    background-color: var(--grey);
     text-align: center;
     height: 100%;
     gap: 0px;
 
-    background-image: url("/Assets/SHILLING-night-bg.jpg");
-    background-size: auto auto; /* Makes the iframe cover the entire background */
+    background-image: url("/Assets/SHILLING-day-bg.jpg");
+    background-size: 100% auto; /* Makes the iframe cover the entire background */
     background-position: center; /* Centers the iframe */
     background-repeat: no-repeat; /* Prevents the iframe from repeating */
 
@@ -198,7 +217,7 @@ nav ul li a:active {
     font-size: 24px;
 
     margin: 0;
-    color: #000000;
+    color: var(--black);
     background-color: transparent;
     text-align: left;
     padding: 8px 0;
@@ -210,7 +229,7 @@ nav ul li a:active {
     font-size: 24px;
 
     margin: 0;
-    color: #000000;
+    color: var(--black);
     background-color: transparent;
     text-align: right;
     padding: 8px 0;
@@ -221,7 +240,7 @@ nav ul li a:active {
     font-size: 18px;
 
     margin: 0;
-    color: #000000;
+    color: var(--black);
     background-color: transparent;
     text-align: left;
     padding: 0px 0;
@@ -232,7 +251,7 @@ nav ul li a:active {
     font-size: 18px;
 
     margin: 0;
-    color: #000000;
+    color: var(--black);
     background-color: transparent;
     text-align: right;
     padding: 0px 0;
@@ -242,7 +261,7 @@ nav ul li a:active {
     font-size: 14px;
     font-weight: normal;
     margin: 0;
-    color: #000000;
+    color: var(--black);
     background-color: transparent;
     text-align: left;
     padding: 8px 0;
@@ -254,7 +273,7 @@ nav ul li a:active {
     font-size: 14px;
     font-weight: normal;
     margin: 0;
-    color: #000000;
+    color: var(--black);
     background-color: transparent;
     text-align: right;
     text-indent: 0%;
@@ -266,7 +285,7 @@ nav ul li a:active {
     font-size: 10px;
     font-weight: normal;
     margin: 0;
-    color: #000000;
+    color: var(--black);
     background-color: transparent;
     text-align: left;
     padding: 8px 0;
@@ -275,14 +294,14 @@ nav ul li a:active {
 
 .inline-link {
     font-weight: normal;
-    color: #000000;
+    color: var(--black);
     text-decoration: none;
     background-color: transparent;
     padding: 0px 0;
 }
 
 a:hover {
-    color: #CCED2B;
+    color: var(--lime);
     font-weight: bold;
     text-decoration: none;
 }
@@ -304,8 +323,8 @@ hr.solid {
     font-weight: bold;
     display: inline-block;
     padding: 5px 10px;
-    background-color: #202A30;
-    color: #EC6921;
+    background-color: var(--grey);
+    color: var(--orange);
     text-decoration: none; /* Remove underline */
     border-radius: 5px; /* Rounded corners */
     font-size: 14px;
@@ -313,22 +332,22 @@ hr.solid {
 }
 
 .button:hover {
-    background-color: #CCED2B;
+    background-color: var(--lime);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Main Content */
 main {
     background-color: #f7f7f7;
-    color: #000000;
+    color: var(--black);
     padding: 20px;
 }
 
 /* Footer */
 footer {
     font-family: Bebas Neue, sans-serif;
-    background-color: #EC6921;
-    color: #ffffff;
+    background-color: var(--orange);
+    color: var(--white);
     text-align: center;
     font-size: 14px;
     font-weight: bold;
@@ -337,4 +356,12 @@ footer {
     width: 100%;
     bottom: 0;
     position: static;
+}
+
+.footer-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 54px;
+    padding-bottom: 12px;
 }
