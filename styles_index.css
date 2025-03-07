@@ -36,7 +36,7 @@ body {
     min-height: 100vh;
 
     background-image: url("/Assets/SHILLING-day-bg.jpg");
-    background-size: auto 100%; /* Makes the iframe cover the entire background */
+    background-size: 100% auto; /* Makes the iframe cover the entire background */
     background-position: center; /* Centers the iframe */
     background-repeat: no-repeat; /* Prevents the iframe from repeating */
 
@@ -212,7 +212,7 @@ nav ul li a:active {
     background-color: transparent;
     text-align: center;
     justify-content: center;
-    height: 728px;
+    height: 682px;
     gap: 0px;
     padding: 210px 0;
     z-index: 10;
