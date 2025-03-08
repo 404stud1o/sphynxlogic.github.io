@@ -205,10 +205,9 @@ nav ul li a:active {
     gap: 0px;
 
     background-image: url("/Assets/SHILLING-day-bg.jpg");
-    background-size: 100% auto; /* Makes the iframe cover the entire background */
+    background-size: 125% auto; /* Makes the iframe cover the entire background */
     background-position: center; /* Centers the iframe */
     background-repeat: no-repeat; /* Prevents the iframe from repeating */
-
 }
 
 .leftheader-h2 {
