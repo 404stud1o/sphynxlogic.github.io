@@ -203,7 +203,6 @@ nav ul li a:active {
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .title {
     font-family: nasalization, sans-serif;
     font-weight: bold;
@@ -266,18 +265,14 @@ footer a:hover {
     color: var(--lime);
     background-color: transparent;
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer a:active {
     color: var(--lime);
     background-color: transparent;
     text-decoration: none;
-}
-
-footer a:visited {
-    color: var(--white);
-    background-color: transparent;
-    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 

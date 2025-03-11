@@ -316,13 +316,6 @@ a:active {
     text-decoration: none;
 }
 
-a:visited {
-    color: var(--black);
-    background-color: transparent;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 /* Solid border */
 hr.solid {
     border-top: 3px solid #bbbbbb;
@@ -393,10 +386,12 @@ footer a:hover {
     color: var(--lime);
     background-color: transparent;
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer a:active {
     color: var(--lime);
     background-color: transparent;
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
