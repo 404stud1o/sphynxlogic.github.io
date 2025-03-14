@@ -19,6 +19,7 @@
     --grey: #202A30;
     --orange: #EC6921;
     --lime: #CCED2B;
+    --linkedin_blue: #0A66C2;
 }
 
 * {
@@ -335,14 +336,51 @@ hr.solid {
     padding: 5px 12px;
     background-color: var(--grey);
     color: var(--orange);
-    text-decoration: none; /* Remove underline */
-    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; 
+    border-radius: 10px; 
     font-size: 14px;
     text-align: center;
 }
 
 .button:hover {
     background-color: var(--lime);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.linkedin_button {
+    color: transparent;
+    display: inline-block;
+    background-image: url("/Assets/LinkedIn_white.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: var(--linkedin_blue);
+    text-decoration: none; 
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.linkedin_button:hover {
+    color: transparent;
+    display: inline-block;
+    background-image: url("/Assets/LinkedIn_black.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: var(--linkedin_blue);
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.linkedin_button:active {
+    color: transparent;
+    display: inline-block;
+    background-image: url("/Assets/LinkedIn_black.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: var(--linkedin_blue);
+    border-radius: 5px;
+    text-align: center;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
