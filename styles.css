@@ -340,9 +340,15 @@ hr.solid {
     border-radius: 10px; 
     font-size: 14px;
     text-align: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
+    background-color: var(--lime);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:active {
     background-color: var(--lime);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -418,6 +424,7 @@ footer a {
     color: var(--white);
     background-color: transparent;
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer a:hover {
