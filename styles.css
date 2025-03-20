@@ -283,6 +283,20 @@ nav ul li a:active {
     padding: 8px 0;
 }
 
+.desc-ul {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    text-indent: 2.5%;
+    color: var(--black);
+    background-color: transparent;
+    text-align: left;
+    padding: 8px 0;
+    word-wrap: break-word;
+    width: 60%;
+    list-style-type: square;
+}
+
 
 .comment-text {
     font-size: 10px;
