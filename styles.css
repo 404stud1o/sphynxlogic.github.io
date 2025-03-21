@@ -283,7 +283,7 @@ nav ul li a:active {
     padding: 8px 0;
 }
 
-.desc-ul {
+.sq-ul {
     font-size: 14px;
     font-weight: normal;
     margin: 0;
@@ -297,6 +297,28 @@ nav ul li a:active {
     list-style-type: square;
 }
 
+.desc-ul {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    text-indent: 2.5%;
+    color: var(--black);
+    background-color: transparent;
+    text-align: left;
+    padding: 8px 0;
+    word-wrap: break-word;
+    width: 60%;
+    list-style-type: none;
+}
+
+.schem-img {
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 14px;
+    width: 100%;
+    height: auto;
+}
 
 .comment-text {
     font-size: 10px;
