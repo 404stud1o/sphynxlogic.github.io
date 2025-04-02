@@ -279,7 +279,7 @@ nav ul li a:active {
     color: var(--black);
     background-color: transparent;
     text-align: right;
-    text-indent: 0%;
+    text-indent: 40%;
     padding: 8px 0;
 }
 
@@ -297,7 +297,7 @@ nav ul li a:active {
     list-style-type: square;
 }
 
-.desc-ul {
+.leftdesc-ul {
     font-size: 14px;
     font-weight: normal;
     margin: 0;
@@ -311,12 +311,43 @@ nav ul li a:active {
     list-style-type: none;
 }
 
+.rightdesc-ul {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    text-indent: 75%;
+    color: var(--black);
+    background-color: transparent;
+    text-align: left;
+    padding: 8px 0;
+    word-wrap: break-word;
+    list-style-type: none;
+}
+
 .schem-img {
     padding-top: 14px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 14px;
     width: 100%;
+    height: auto;
+}
+
+.schem-img-small {
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 14px;
+    width: 50%;
+    height: auto;
+}
+
+.example-img {
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 14px;
+    width: 60%;
     height: auto;
 }
 
