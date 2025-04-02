@@ -19,7 +19,13 @@
     --grey: #202A30;
     --orange: #EC6921;
     --lime: #CCED2B;
+    --purple: #BDBBFF;
     --linkedin_blue: #0A66C2;
+}
+
+::selection {
+    color: var(--purple);
+    background: var(--orange);
 }
 
 * {
