@@ -458,10 +458,10 @@ hr.solid {
 .linkedin_button:hover {
     color: transparent;
     display: inline-block;
-    background-image: url("/Assets/LinkedIn_black.svg");
+    background-image: url("/Assets/LinkedIn_white.svg");
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-color: var(--linkedin_blue);
+    background-color: var(--black);
     border-radius: 5px;
     text-align: center;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
