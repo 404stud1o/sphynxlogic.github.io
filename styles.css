@@ -230,7 +230,7 @@ nav ul li a:active {
     height: 100%;
     gap: 0px;
 
-    background-image: url("/Assets/SHILLING-day-bg.jpg");
+    background-image: url("https://raw.githubusercontent.com/404stud1o/SphynxLogic/refs/heads/main/Assets/SHILLING-day-bg.jpg");
     background-size: 125% auto; /* Makes the iframe cover the entire background */
     background-position: center; /* Centers the iframe */
     background-repeat: no-repeat; /* Prevents the iframe from repeating */
@@ -445,7 +445,7 @@ hr.solid {
 .linkedin_button {
     color: transparent;
     display: inline-block;
-    background-image: url("/Assets/LinkedIn_white.svg");
+    background-image: url("https://raw.githubusercontent.com/404stud1o/SphynxLogic/refs/heads/main/Assets/LinkedIn_white.svg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: var(--linkedin_blue);
@@ -458,7 +458,7 @@ hr.solid {
 .linkedin_button:hover {
     color: transparent;
     display: inline-block;
-    background-image: url("/Assets/LinkedIn_white.svg");
+    background-image: url("https://raw.githubusercontent.com/404stud1o/SphynxLogic/refs/heads/main/Assets/LinkedIn_white.svg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: var(--black);
@@ -470,7 +470,7 @@ hr.solid {
 .linkedin_button:active {
     color: transparent;
     display: inline-block;
-    background-image: url("/Assets/LinkedIn_black.svg");
+    background-image: url("https://raw.githubusercontent.com/404stud1o/SphynxLogic/refs/heads/main/Assets/LinkedIn_white.svg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: var(--linkedin_blue);

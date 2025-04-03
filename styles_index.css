@@ -58,7 +58,7 @@ body {
     justify-content: center;
     min-height: 100vh;
 
-    background-image: url("/Assets/SHILLING-day-bg.jpg");
+    background-image: url("https://raw.githubusercontent.com/404stud1o/SphynxLogic/refs/heads/main/Assets/SHILLING-day-bg.jpg");
     background-size: 115% auto; /* Makes the iframe cover the entire background */
     background-position: center; /* Centers the iframe */
     background-repeat: no-repeat; /* Prevents the iframe from repeating */
